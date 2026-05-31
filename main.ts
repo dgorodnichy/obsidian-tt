@@ -300,7 +300,8 @@ class TimeTrackerView extends ItemView {
     input.className = "tt-edit-input";
 
     const finish = async () => {
-      const val = input.value.trim();
+      let val = input.value.trim();
+      if (field === "time") val = val.replace(/\s*h$/i, "");
       if (val) {
         if (field === "time" && !/^\d+(?:\.\d+)?$/.test(val)) {
           new Notice("Неверный формат времени. Используйте: 1, 1.5, 2.5");

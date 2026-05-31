@@ -302,8 +302,8 @@ class TimeTrackerView extends ItemView {
     const finish = async () => {
       const val = input.value.trim();
       if (val) {
-        if (field === "time" && !/^\d+(?:\.\d+)?\s*h/i.test(val)) {
-          new Notice("Неверный формат времени. Используйте: 1h, 2.5h");
+        if (field === "time" && !/^\d+(?:\.\d+)?$/.test(val)) {
+          new Notice("Неверный формат времени. Используйте: 1, 1.5, 2.5");
           await this.renderList();
           return;
         }

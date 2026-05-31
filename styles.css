@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin-top: 38px;
 }
 
 .tt-form {
@@ -27,6 +28,11 @@
   flex: none;
 }
 
+.tt-input-date {
+  width: 140px;
+  flex: none;
+}
+
 .tt-checkbox-label {
   display: flex;
   align-items: center;
@@ -36,8 +42,19 @@
   white-space: nowrap;
 }
 
-.tt-btn {
+button.tt-btn {
   cursor: pointer;
+  background: var(--interactive-accent) !important;
+  color: var(--text-on-accent) !important;
+  border: none !important;
+  padding: 5px 14px !important;
+  border-radius: 4px !important;
+  font-weight: var(--bold-weight) !important;
+  box-shadow: none !important;
+}
+
+button.tt-btn:hover {
+  background: var(--interactive-accent-hover) !important;
 }
 
 .tt-list {
@@ -71,6 +88,10 @@
 
 .tt-day-summary.tt-green {
   color: var(--text-success);
+}
+
+.tt-day-summary.tt-orange {
+  color: var(--text-warning);
 }
 
 .tt-entry {

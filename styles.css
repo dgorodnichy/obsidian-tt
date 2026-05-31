@@ -1,0 +1,137 @@
+.tt-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tt-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tt-input {
+  flex: 1;
+  min-width: 120px;
+}
+
+.tt-input-narrow {
+  width: 100px;
+  flex: none;
+}
+
+.tt-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.tt-btn {
+  cursor: pointer;
+}
+
+.tt-list {
+  padding: 8px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.tt-day {
+  margin-bottom: 8px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-primary);
+}
+
+.tt-day-summary {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: var(--bold-weight);
+  border-radius: 6px;
+  user-select: none;
+}
+
+.tt-day-summary:hover {
+  background: var(--background-modifier-hover);
+}
+
+.tt-day-summary.tt-red {
+  color: var(--text-error);
+}
+
+.tt-day-summary.tt-green {
+  color: var(--text-success);
+}
+
+.tt-entry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px 6px 24px;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.tt-entry:hover {
+  background: var(--background-modifier-hover);
+}
+
+.tt-entry-text {
+  flex: 1;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.tt-entry-text:hover {
+  background: var(--background-modifier-hover);
+}
+
+.tt-entry-time {
+  color: var(--text-muted);
+  cursor: pointer;
+  width: 60px;
+  text-align: right;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.tt-entry-time:hover {
+  background: var(--background-modifier-hover);
+}
+
+.tt-entry-cb {
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.tt-del-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.tt-del-btn:hover {
+  color: var(--text-error);
+  background: var(--background-modifier-hover);
+}
+
+.tt-edit-input {
+  flex: 1;
+  padding: 2px 4px;
+}
